@@ -37,6 +37,16 @@ class RestaurantTest {
         assertFalse(restaurant.isRestaurantOpen());
     }
     //<<<<<<<<<<<<<<<<<<<<<<<<<OPEN/CLOSED>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+    //>>>>>>>>>>>>>>>>>>>>>>>>>>>ORDER DETAILS<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+    @Test
+    public void order_value_should_get_cumulative_total_when_collection_of_items_selected(){
+        restaurantCreation();
+        spoof = restaurant.getMenu();
+        assertEquals(606,restaurant.getOrderValue(spoof));
+    }
+
+    //<<<<<<<<<<<<<<<<<<<<<<<<<ORDER DETAILS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
 
     //>>>>>>>>>>>>>>>>>>>>>>>>>>>MENU<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
     @Test

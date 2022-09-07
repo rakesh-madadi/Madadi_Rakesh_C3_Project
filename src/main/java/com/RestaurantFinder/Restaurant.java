@@ -16,6 +16,8 @@ public class Restaurant {
         this.location = location;
         this.openingTime = openingTime;
         this.closingTime = closingTime;
+        this.menu.add(new Item("Chicken Biryani",173));
+        this.menu.add(new Item("Pepsi",45));
     }
     public LocalTime getCurrentTime(){ return  LocalTime.now(); }
 
@@ -79,6 +81,8 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+
+
 
 }
 
